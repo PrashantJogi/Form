@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <script src="../Js/ValidationFile.js"></script>
+    </head>
+<body>
+    
+        
+            <label>Name</label>
+            <input type="text" name="name" id="name" data-validation="required|min:2|max:10|regex:^[a-zA-Z\s]+$" />
+            <div class="error" style="color: red;" id="nameErr"></div>
+            <br/>
+            
+            <label>Address</label>
+            <input type="text" name="address" id="address" data-validation="required|min:8|max:15|regex:^[a-zA-Z1-9\s]" />
+            <div class="error" style="color: red;" id="addressErr"></div>
+            <br/>
+            <label>Phone</label>
+            <input type="number" name="phone" id="phone" data-validation="required|min:10|regex:^[1-9]\d{9}"/>
+            <div class="error" style="color: red;" id="phoneErr"></div>
+            <br/>
+            
+            <label>Gender</label>
+            
+            <input type="radio" name="gender" id="gender1"  value="Male" data-validation="required">Male </input>
+            <input type="radio" name="gender" id="gender2"  value="Female">Female </input>
+            <div class="error" style="color: red;" id="genderErr"></div>
+            <br/>
+            
+            <label>Hobies</label>
+            
+            <input type="checkbox" name="hobbies" id="hobbies1"  value="Music" data-validation="required">Music</input>
+            <input type="checkbox" name="hobbies" id="hobbies2"  value="Dancing">Dancing</input>
+            <div class="error" style="color: red;" id="hobbiesErr"></div>
+            <br/>
+            
+            <label>Comment</label>
+            <br/>
+            <textarea name="comment" id="comment" rows="4" cols="10" data-validation="required|min:5|max:10|regex:^[a-zA-Z1-9\s]"></textarea>
+            <div class="error" style="color: red;" id="commentErr"></div>
+            <br/>
+            
+            <label>Status</label>
+            <br/>
+            <input type="radio" name="status" id="status1"  value="Single" data-validation="required">Single</input>
+            <input type="radio" name="status" id="status2"  value="Married">Married</input>
+            <div class="error" style="color: red;" id="statusErr"></div>
+            <br/>
+            
+            <button>Cancle</button>
+            <button id="submit" onclick="validateForm()">Submit</button>
+            
+        
+
+   
+</body>
+</html>
